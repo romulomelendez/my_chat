@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createWebHistory, createRouter } from 'vue-router';
+import { createWebHashHistory, createRouter } from 'vue-router';
 
 import Home from '../views/Home'
 import Chat from '../views/Chat'
@@ -13,15 +13,13 @@ const routes = [
 
 const router = createRouter({
   
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 
 })
 
-const app = createApp({})
-
 export default router
 
+const app = createApp({})
 app.use(router)
-
 app.mount('#app')
