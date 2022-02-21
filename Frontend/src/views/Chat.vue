@@ -1,14 +1,31 @@
 <template>
 
-    <h1>Chat Page</h1>
+    <div>
+
+        <h1>Chat Page</h1>
+        <h3>{{ username }}</h3>
+
+    </div>
 
 </template>
 
 <script>
 
+    //import router from '../routes/routes'
+
     export default {
 
-        name: 'Chat'
+        name: 'Chat',
+
+        data() {
+
+            return {
+
+                username: this.$route.params.username
+
+            }
+
+        }
 
     }
 

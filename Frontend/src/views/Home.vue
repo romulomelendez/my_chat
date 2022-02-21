@@ -31,9 +31,9 @@
 
             handleUserName() {
 
-                if ( this.username.length ) {
+                if ( this.username.trim() ) {
 
-                    router.push('/chat')
+                    router.push({ name: 'Chat', params: { username: this.username } })
 
                 } else {
 
