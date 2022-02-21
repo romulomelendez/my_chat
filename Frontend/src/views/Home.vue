@@ -10,38 +10,39 @@
 </template>
 
 <script>
-import router from "../../../backend/routes"
 
+    import router from '../routes/routes'
 
-export default {
+    export default {
 
-    data() {
+        data() {
 
-        return {
+            return {
 
-            username: '',
+                username: '',
 
-        }
-
-    },
-
-    methods: {
-
-        handleUserName() {
-
-            if ( this.username.length ) {
-
-                this.$router.push('/chat')
-
-            } else {
-
-                alert('Input cannot be empty')
             }
 
+        },
+
+        methods: {
+
+            handleUserName() {
+
+                if ( this.username.length ) {
+
+                    router.push('/chat')
+
+                } else {
+
+                    alert('Input cannot be empty')
+                    
+                }
+
+            }
+            
         }
         
-    }
-    
 }
 
 </script>

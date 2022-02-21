@@ -1,16 +1,26 @@
+import { createApp } from 'vue'
+import { createWebHistory, createRouter } from 'vue-router';
+
+import Home from '../views/Home'
+import Chat from '../views/Chat'
+
 const routes = [
+
   { path: '/', component: Home },
   { path: '/chat', component: Chat },
+
 ]
 
-const router = VueRouter.createRouter({
+const router = createRouter({
   
-  history: VueRouter.createWebHashHistory(),
+  history: createWebHistory(),
   routes
 
 })
 
-const app = Vue.createApp({})
+const app = createApp({})
+
+export default router
 
 app.use(router)
 
