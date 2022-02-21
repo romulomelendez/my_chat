@@ -1,13 +1,14 @@
-import { createApp } from 'vue'
+//import { createApp } from 'vue'
 import { createWebHashHistory, createRouter } from 'vue-router';
 
+//import App from '../App.vue'
 import Home from '../views/Home'
 import Chat from '../views/Chat'
 
 const routes = [
 
-  { path: '/', component: Home },
-  { path: '/chat', component: Chat },
+  { path: '/', name: 'Home', component: Home },
+  { path: '/chat', name: 'Chat', component: Chat },
 
 ]
 
@@ -19,7 +20,3 @@ const router = createRouter({
 })
 
 export default router
-
-const app = createApp({})
-app.use(router)
-app.mount('#app')
